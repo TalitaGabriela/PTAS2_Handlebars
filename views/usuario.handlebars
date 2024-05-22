@@ -1,1 +1,6 @@
-<h2>Usuário Fulaninho</h2>
+<h2>Usuário {{nome}}</h2>
+{{#if endereco }}
+<p>Endereço: {{endereco}}</p>
+{{else}}
+<p>Endereço não registrado...</p>
+{{/if}}

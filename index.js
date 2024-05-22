@@ -6,8 +6,19 @@ const app = express();
 app.engine("handlebars", exphbs.engine());
 app.set("view engine", "handlebars");
 
+var usuarios = [
+    {
+        nome: "Clebinho",
+        endereco: "Rua 3, Morada do Sol, nº 500",
+    },
+    {
+        nome: "Rogérinho",
+        endereco: "Rua da Saudade, nº 3000", 
+    }
+];
+
 app.get("/", (req,res) =>{
-    res.render("home");
+    res.render("home", usuarios);
 });
 
 app.get("/novo", (req,res) =>{
@@ -15,7 +26,12 @@ app.get("/novo", (req,res) =>{
 });
 
 app.get("/usuario/:id", (req,res) =>{
-    res.render("usuario");
+    let usuario = {
+        nome: "Talita",
+        endereco: "Av.Eurico Soares, nº 1000.",
+    }
+
+    res.render("usuario", usuario);
 });
 
 app.listen(8000, () => {
