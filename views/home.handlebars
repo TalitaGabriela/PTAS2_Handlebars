@@ -1,6 +1,11 @@
 <h2>Usuários Cadastrados:</h2>
+
+{{#if usuarios}}
 <ul>
     {{#each usuarios}}
     <li>{{this.nome}} - {{this.endereco}}</li>
     {{/each}}
 </ul>
+{{else}}
+<li>Usuários não cadastrado.</li>
+{{/if}}

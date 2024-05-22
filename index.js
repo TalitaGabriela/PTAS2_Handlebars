@@ -8,13 +8,17 @@ app.set("view engine", "handlebars");
 
 var usuarios = [
     {
+        nome: "Talita",
+        endereco: "Av.Eurico Soares, nº 1000.",
+    },
+    {
         nome: "Clebinho",
         endereco: "Rua 3, Morada do Sol, nº 500",
     },
     {
         nome: "Rogérinho",
         endereco: "Rua da Saudade, nº 3000", 
-    }
+    },
 ];
 
 app.get("/", (req,res) =>{
