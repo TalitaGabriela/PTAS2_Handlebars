@@ -18,7 +18,7 @@ var usuarios = [
 ];
 
 app.get("/", (req,res) =>{
-    res.render("home", usuarios);
+    res.render("home", {usuarios});
 });
 
 app.get("/novo", (req,res) =>{
